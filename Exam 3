@@ -1,0 +1,25 @@
+// TODO
+// remaimber : fungsi checkType untuk mendeteksi dari semua tipe data.
+fun <T> checkType(args: T): String {
+    return when (args) {
+        is Int -> "Yes! it's Integer"
+        is String -> "Yes! it's String"
+        is Boolean -> "Yes! it's Boolean"
+        is Double -> "Yes! it's Double"
+        is List<*> -> "Yes! it's List"
+        is Map<*, *> -> "Yes! it's Map"
+        else -> "Uknow type"
+    }
+}
+private fun main() {
+    println(
+        """
+        'Dicoding Indonesia' is String? ${checkType("Dicoding Indonesia")}
+        'True' is Boolean? ${checkType(true)}
+        '1' is Integer? ${checkType(1)}
+        '10.01' is Double? ${checkType(10.01)}
+        '[10, 9, 8 , 6]' is List? ${checkType(listOf(10, 9, 8, 6))}
+        '{score=10}' is Map? ${checkType(mapOf("score" to 10))}
+        """.trimIndent()
+    )
+}
