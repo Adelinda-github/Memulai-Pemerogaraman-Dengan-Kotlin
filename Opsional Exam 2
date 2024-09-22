@@ -1,0 +1,13 @@
+// TODO
+fun minAndMax(number: Int): Int {
+    val Number = number.toString().map { it.toString().toInt() }
+
+        val minNumber = Number.minOrNull()?: 0
+        val maxNumber =Number.maxOrNull()?:  0
+    return minNumber + maxNumber
+}
+private fun main() {
+    println(minAndMax(987234) == 11)
+    println(minAndMax(8812334) == 9)
+    println(minAndMax(10) == 1)
+}
