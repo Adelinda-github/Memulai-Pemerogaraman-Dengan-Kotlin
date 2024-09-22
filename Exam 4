@@ -1,0 +1,16 @@
+// TODO
+fun vehicle(): Any {
+    val result = hashMapOf<String, String>()
+    result["type"] = "motorcycle"
+    result["maxSpeed"] = "230Km/s"
+    result["maxTank"] = "100Ltr"
+    return result
+}
+private fun main() {
+    println(
+        """
+        My Map Result:
+        ${vehicle()}
+        """.trimIndent()
+    )
+}
